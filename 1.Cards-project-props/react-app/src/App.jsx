@@ -4,9 +4,9 @@ function App() {
   return (
     <>
       <div className="parent">
-        <Card  />
-        <Card jobTitle= "Senior Software Engineer"  />
-        <Card jobTitle= "Associate Software Engineer"/>
+        <Card/>
+        <Card jobTitle= "Software Engineer" salary= {110} />
+        <Card jobTitle= "Crafting Engineer" salary= {120}/>
       </div>
     </>
   );

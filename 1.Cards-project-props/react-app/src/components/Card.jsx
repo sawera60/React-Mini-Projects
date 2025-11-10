@@ -1,6 +1,8 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({ salary = "$100/hr", jobTitle="UI/UX Designer"}) => {
+  const formattedsalary= typeof salary==="number" ? `$${salary}/hr` : salary;
+  
   return (
     <>
       <div class="job-card">
@@ -13,7 +15,7 @@ const Card = () => {
           />
           <button class="save-button">
             <i class="fa-regular fa-bookmark"></i>
-            Save
+            Save 
           </button>
         </div>
         {/*         
@@ -23,7 +25,7 @@ const Card = () => {
             Amazon
             <span class="post-time">&bull; 5 days ago</span>
           </h3>
-          <h2 class="job-title">Senior UI/UX Designer</h2>
+          <h2 class="job-title">{jobTitle}</h2>
 
           {/* <!-- Tags --> */}
           <div class="job-tags">
@@ -35,7 +37,7 @@ const Card = () => {
         <!-- Bottom Section: Salary and Apply Button --> */}
         <div class="card-footer">
           <div>
-            <h3 class="salary">$120/hr</h3>
+            <h3 class="salary"> {formattedsalary}</h3>
             <p class="location">Islamabad, Pakistan</p>
           </div>
           <button class="apply-button">Apply Now</button>
